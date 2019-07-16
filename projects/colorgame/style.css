@@ -1,0 +1,13 @@
+.board {
+    width: 20vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 7px;
+}
+
+.square {
+    background-color: orangered;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+}
