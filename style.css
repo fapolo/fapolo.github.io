@@ -30,6 +30,10 @@ body {
     transition: all 0.2s ease-out;
 }
 
+.logo:visited {
+    color: inherit;
+}
+
 .logo:active,
 .logo:hover,
 .logo:focus {
