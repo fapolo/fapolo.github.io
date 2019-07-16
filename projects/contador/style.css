@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Expletus+Sans:400,700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Expletus Sans, sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+.title {
+    padding-top: 3rem;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.bigscore {
+    font-size: 10em;
+}
+
+.set-counter {
+    padding: 2rem 0rem;
+}
+
+.set-counter p {
+    font-size: 1.5em;
+    padding: 0.5rem 0rem;
+}
+
+.show-winner {
+    display: inline-block;
+    width: 70vw;
+    height: 2rem;
+    font-size: 2em;
+    font-weight: bold;
+    color: green;
+}
+
+#change-counter {
+    width: 50px;
+    text-align: center;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.btn {
+    padding: 0.7rem 2.5rem;
+    background-color: rgb(82, 119, 121);
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+}
+
+.win {
+    color: green;
+}

@@ -21,16 +21,13 @@ body {
 }
 
 .logo {
+    color: black;
     font-size: 1.6rem;
     font-weight: bold;
     display: flex;
     justify-content: center;
     text-decoration: none;
     transition: all 0.2s ease-out;
-}
-
-.logo:visited {
-    color: inherit;
 }
 
 .logo:active,
