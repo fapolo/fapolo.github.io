@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+body,
+html {
+	margin: 0;
+}
+
+body {
+	height: 100%;
+	font-family: 'Montserrat';
+}
+
+header {
+	position: absolute;
+	padding: 1em;
+	z-index: 20;
+	display: flex;
+	justify-content: space-between;
+	width: calc(100% - 2em); /* remove padding direita e da esquerda, nao cria scroll bar */
+	background: white;
+}
+
+header a {
+	text-decoration: none;
+	color: black;
+}
+
+.logo {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+li a {
+	padding: 1em;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+.wrapper section {
+	padding: 3em;
+}
+
+.wrapper .hero {
+	padding-top: 8em;
+	background: url("../assets/bg.jpg");
+	background-size: cover;
+}
+
+.wrapper .sidebar,
+.wrapper .subscribe {
+	font-size: .9rem;
+	line-height: 1.6em;
+}
+
+.wrapper .sidebar {
+	background: yellow;
+}
+
+h1, h2, .read-btn {
+	text-transform: uppercase;
+	margin 0;
+}
+
+h2 {
+	font-size: 1.4rem;
+}
+
+.hero p {
+	width: 60%;
+	font-size: 1.2rem;
+	margin-bottom: 0;
+}
+
+.sidebar p {
+	margin-bottom: 2em;
+}
+
+.read-btn {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+.primary {
+	padding: 1.5em 1.5em 1.5em 3em;
+	border: 1px solid gray;
+	display: inline-block;
+	margin-top: 3em;
+	margin-left: -3.1em;
+
+}
+
+.arrow {
+	padding-right: 0.7em;
+	font-family: 'Arial';
+	font-size: 0.7rem;
+}
+
+.input {
+	width: calc(100% - 2em);
+	padding: 1em;
+	font-family: 'Montserrat';
+	margin-bottom: 1em;
+	border: 1px solid gray;
+}
+
+.cta {
+	width: 100%;
+	background: black;
+	color: white;
+	padding: 1em;
+	border: none;
+	font-family: 'Montserrat';
+}
+
+.videoref {
+	color: black;
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 545px) {
+	.wrapper .hero {
+		background-size: 120%;
+	}
+
+	.hero p {
+		width: 50%;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+	html {
+		font-size: 18px;
+	}
+
+	.wrapper {
+		grid-template-rows: 2;
+		grid-template-areas:
+			"hero hero"
+			"featured subscribe";
+	}
+
+	.wrapper .hero {
+		background-size: 120%;
+		background-position: left 20%;
+		grid-area: hero;
+	}
+
+	.wrapper .sidebar {
+		grid-area: featured;
+	}
+
+	.wrapper .subscribe {
+		grid-area: subscribe; 
+	}
+
+	h1 {
+		font-size: 2.4rem;
+	}
+}
+
+@media only screen and (min-width: 1020px) {
+	header {
+		background: none;
+	}
+
+	.wrapper {
+		grid-template-columns: 70% auto;
+		grid-template-rows: 60% auto;
+		grid-template-areas: 
+			"hero featured"
+			"hero subscribe";
+		height: 100vh;
+	}
+
+	.wrapper .hero {
+		background-size: cover;
+	}
+
+	.wrapper section {
+		display: grid;
+		grid-template-rows: auto;
+		align-items: center;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	html {
+		font-size: 21px;
+	}
+}
