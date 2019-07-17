@@ -1,6 +1,8 @@
 const squares = document.querySelectorAll(".square");
 const targetDisplay = document.querySelector(".target");
+const restart = document.querySelector(".restart");
 let winSquare = 99;
+let gameOver = false;
 
 // ==============================
 // FUNCOES
@@ -22,16 +24,52 @@ function setTarget() {
     squares[i].style.background = colorDisplay;
 }
 
+function colorAll(rightSquare) {
+    squares.forEach(function(square){
+        square.style.background = rightSquare.style.background;
+    })
+}
+
+function blackoutSquare(square) {
+    square.style.background = "rgb(0, 0, 0)";
+}
+
+function setupSquares() {
+    squares.forEach(function(square){
+        square.style.background = rndColor();
+    });
+}
+
 // ==============================
 // SETUP E INICIO
 // ==============================
 
-squares.forEach(function(square){
-    square.style.background = rndColor();
-});
 
+setupSquares();
 setTarget();
 
-//ao clicar no square, verificar se é a cor certa
-//se não, escurecer/sumir
-//se sim, mudar a cor de todos os outros
+squares.forEach(function(square,i){
+    square.addEventListener("click", function(){
+        if (i !== winSquare && !gameOver) {
+            blackoutSquare(square);
+        }
+        else if (i === winSquare && !gameOver) {
+            colorAll(square);
+            gameOver = true;
+        }
+        else {
+            return 0;
+        }
+    })
+});
+
+restart.addEventListener("click", function(){
+    if (gameOver) {
+        setupSquares();
+        setTarget();
+        gameOver = false;
+    }
+    else {
+        return 0;
+    }
+});
