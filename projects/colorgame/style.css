@@ -1,13 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Montserrat:400,700&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+.header {
+    background-color: paleturquoise;
+    padding-top: 1rem;
+    border-bottom: 1px solid cadetblue;
+}
+
+.title {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 7em;
+    padding-bottom: 1.5rem;
+}
+
+.target {
+    font-size: 5em;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
 .board {
-    width: 20vw;
+    width: 495px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 7px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 50%;
+
+    transform: translateX(-50%);
 }
 
 .square {
-    background-color: orangered;
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
     border-radius: 10%;
+    transition: all 0.2s;
+}
+
+.opt-bar {
+    padding: 1rem 0;
+}
+
+.message {
+    height: 2rem;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: green;
+}
+
+.restart {
+    margin-top: 1rem;
+    padding: 0.7rem 2rem;
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid cadetblue;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.restart:hover {
+    background-color: cadetblue;
+    color: white;
+}
+
+@media only screen and (max-width: 520px) {
+    .title {
+        font-size: 5em;
+    }
+
+    .target {
+        font-size: 3em;
+        padding-bottom: 1.5rem;
+    }
+    
+    .board {
+        width: 350px;
+    }
+    
+    .square {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .restart {
+        padding: 0.7rem 1.5rem;
+    }
 }

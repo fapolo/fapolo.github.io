@@ -31,7 +31,7 @@ function colorAll(rightSquare) {
 }
 
 function blackoutSquare(square) {
-    square.style.background = "rgb(0, 0, 0)";
+    square.style.background = "rgb(255, 255, 255)";
 }
 
 function setupSquares() {
