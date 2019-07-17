@@ -31,14 +31,27 @@ function addCloseFunction() {
     })
 }
 
+function closeBtnEffect() {
+    todos.forEach(function(todo, i){
+        todo.addEventListener("mouseover", function() {
+            closeSpans[i].classList.toggle("close-active");
+        });
+        todo.addEventListener("mouseout", function() {
+            closeSpans[i].classList.toggle("close-active");
+        });
+    })
+}
+
 todoInput.addEventListener("keypress", function(input){
     let keyPressed = input.keyCode || input.which;
     if (keyPressed === 13) {
         addNewTodo();
         addCheckToggle();
         addCloseFunction();
+        closeBtnEffect();
     }
 })
 
 addCheckToggle();
 addCloseFunction();
+closeBtnEffect();

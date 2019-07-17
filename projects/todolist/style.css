@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    width: 340px;
+    width: 320px;
     margin: 0 auto;
     background-color: white;
     border: 1px solid lightsteelblue;
@@ -47,7 +47,6 @@ body {
 .todo {
     padding: 0.7rem 0;
     justify-content: space-between;
-    cursor: pointer;
 }
 
 .todo:nth-child(2n) {
@@ -55,11 +54,18 @@ body {
 }
 
 .close {
+    width: 10px;
     color: white;
     background-color: red;
     margin-right: 1rem;
-    padding: 0.7rem 1rem;
     cursor: pointer;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.close-active {
+    opacity: 1;
+    padding: 0.7rem 1rem;
 }
 
 .checked {
