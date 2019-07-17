@@ -1,6 +1,7 @@
 const squares = document.querySelectorAll(".square");
 const targetDisplay = document.querySelector(".target");
 const restart = document.querySelector(".restart");
+const message = document.querySelector(".message");
 let winSquare = 99;
 let gameOver = false;
 
@@ -52,9 +53,11 @@ squares.forEach(function(square,i){
     square.addEventListener("click", function(){
         if (i !== winSquare && !gameOver) {
             blackoutSquare(square);
+            message.textContent = "Cor errada.";
         }
         else if (i === winSquare && !gameOver) {
             colorAll(square);
+            message.textContent = "Você venceu!";
             gameOver = true;
         }
         else {
@@ -66,5 +69,6 @@ squares.forEach(function(square,i){
 restart.addEventListener("click", function(){
     setupSquares();
     setTarget();
+    message.textContent = "";
     gameOver = false;
 });
