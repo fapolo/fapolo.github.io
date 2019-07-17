@@ -5,7 +5,7 @@ let winSquare = 99;
 let gameOver = false;
 
 // ==============================
-// FUNCOES
+// FUNÇÕES
 // ==============================
 
 function rndColor() {
@@ -64,12 +64,7 @@ squares.forEach(function(square,i){
 });
 
 restart.addEventListener("click", function(){
-    if (gameOver) {
-        setupSquares();
-        setTarget();
-        gameOver = false;
-    }
-    else {
-        return 0;
-    }
+    setupSquares();
+    setTarget();
+    gameOver = false;
 });
