@@ -24,10 +24,22 @@ body {
     transform: translateY(7rem);
 }
 
+.header {
+    padding: 0.7rem 2rem;
+    background-color: #89bed6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .title {
     font-size: 3em;
-    padding: 0.7rem 0 0.7rem 2rem;
-    background-color: #89bed6;
+    padding: 0;
+}
+
+.toggle-new {
+    font-size: 2.5em;
+    cursor: pointer;
 }
 
 .add-new {
@@ -71,4 +83,8 @@ body {
 .checked {
     color: gray;
     text-decoration: line-through;
+}
+
+.hidden {
+    display: none;
 }

@@ -1,5 +1,6 @@
 const todoInput = document.querySelector(".add-new");
 const todoList = document.querySelector(".list");
+const toggleInput = document.querySelector(".toggle-new");
 
 let todos = document.querySelectorAll(".todo");
 let closeSpans = document.querySelectorAll(".close");
@@ -50,6 +51,10 @@ todoInput.addEventListener("keypress", function(input){
         addCloseFunction();
         closeBtnEffect();
     }
+})
+
+toggleInput.addEventListener("click", function(){
+    todoInput.classList.toggle("hidden");
 })
 
 addCheckToggle();
