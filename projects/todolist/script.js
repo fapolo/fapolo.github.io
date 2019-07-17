@@ -7,7 +7,7 @@ let closeSpans = document.querySelectorAll(".close");
 function addNewTodo() {
     if (todoInput.value) {
         let newTodo = todoInput.value;
-        let newHTML = "<li class=\"todo\"><span class=\"close\">X</span> " + newTodo + "</li>";
+        let newHTML = "<li class=\"todo\"><span class=\"close\"><i class=\"fas fa-trash\"></i></span> " + newTodo + "</li>";
         todoInput.value = "";
         todoList.innerHTML += newHTML;
     }
