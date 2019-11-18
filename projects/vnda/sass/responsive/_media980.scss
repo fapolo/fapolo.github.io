@@ -1,0 +1,124 @@
+@media only screen and (min-width: 980px) {
+  .header {
+    .alert__promo {
+      font-size: 1em;
+      padding: {
+        left: 15rem;
+        right: 15rem;
+      }
+    }
+
+    .logo {
+      font-size: 7em;
+      margin: 1.5rem 0;
+    }
+
+    .header-boxes {
+      width: 100vw;
+      position: absolute;
+      justify-content: space-between;
+      top: 110px;
+      padding: 0 5rem;
+
+      &__search {
+        justify-content: left;
+
+        &--input {
+          width: 10rem;
+
+          &:focus {
+            width: 15rem;
+          }
+        }
+      }
+
+      &__login {
+        justify-content: right;
+      }
+    }
+
+    .nav {
+      position: relative;
+      top: 0;
+      width: 100vw;
+      transform: translateX(0);
+      border-bottom: 1px solid $color-base-highlight;
+
+      &__toggle {
+        display: none;
+      }
+
+      &__menu {
+        display: flex;
+        justify-content: space-around;
+
+        &--item {
+          width: auto;
+          padding: 0.5rem 1rem;
+          border-bottom: 1px solid $color-base-pastel;
+
+          &:hover,
+          &:active {
+            background-color: $color-base-pastel;
+            border-bottom: 1px solid $color-base-highlight;
+            color: $color-base-highlight;
+            font-weight: normal;
+            transform: translateX(0);
+          }
+
+          .nav__menu--link {
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+
+  .highlights {
+    width: 50%;
+    padding: {
+      top: 2rem;
+      bottom: 2rem;
+      left: 0;
+      right: 0;
+    }
+
+    .card {
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &__btn {
+        opacity: 0;
+        position: absolute;
+        width: 70%;
+        top: 40%;
+        transform: translateY(-50%);
+        transition: all 0.2s;
+      }
+
+      &:hover {
+        opacity: 0.5;
+
+        .card__btn {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .footer {
+    grid-auto-flow: column;
+    align-items: auto;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    .contactus {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      &__mail {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

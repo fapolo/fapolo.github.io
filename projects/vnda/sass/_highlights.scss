@@ -1,0 +1,69 @@
+$color-white: #fff;
+$color-black: #000000;
+
+$color-base-white: #f6f6f6;
+$color-base-pastel: #f5efd9;
+$color-base-highlight: #cf6823;
+$color-base-black: #272727;
+
+$font-playfair: "Playfair Display", serif;
+$font-ptsans: "PT Sans", sans-serif;
+
+.highlights {
+  display: grid;
+  grid-auto-flow: row;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &__img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    &__name {
+      font-family: $font-playfair;
+    }
+    &__name,
+    &__price {
+      font-size: 1.5em;
+      line-height: 1.5em;
+      color: $color-base-highlight;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &__extra {
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+
+    &__btn {
+      margin-top: 0.5rem;
+      width: 100%;
+      padding: 0.5rem 1.2rem;
+      border: 1px solid $color-base-highlight;
+      border-radius: 0.7rem;
+      color: $color-base-highlight;
+      font-weight: bold;
+      background-color: $color-white;
+      cursor: pointer;
+
+      transition: all 0.2s;
+
+      &:hover,
+      &:active {
+        background-color: $color-base-highlight;
+        color: $color-white;
+      }
+    }
+  }
+}
