@@ -1,0 +1,50 @@
+@media only screen and (min-width: 1200px) {
+  .header {
+    .alert__promo {
+      padding: {
+        left: 20rem;
+        right: 20rem;
+      }
+    }
+
+    .header-boxes {
+      padding: 0 10rem;
+    }
+
+    .logo {
+      margin: 2rem auto;
+    }
+
+    .nav {
+      background-color: $color-base-pastel;
+      &__menu {
+        width: 80%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .promo-banner {
+    img {
+      height: 450px;
+    }
+  }
+
+  .blog {
+    width: 60%;
+  }
+
+  .subscribe {
+    padding: 2rem 10rem;
+
+    &__form {
+      justify-content: space-evenly;
+    }
+  }
+
+  .footer {
+    padding: 5rem 10rem;
+  }
+}

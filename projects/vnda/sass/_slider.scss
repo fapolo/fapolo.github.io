@@ -1,0 +1,42 @@
+$color-white: #fff;
+$color-black: #000000;
+
+$color-base-white: #f6f6f6;
+$color-base-pastel: #f5efd9;
+$color-base-highlight: #cf6823;
+$color-base-black: #272727;
+
+$font-playfair: "Playfair Display", serif;
+$font-ptsans: "PT Sans", sans-serif;
+
+.slider {
+  width: 100vw;
+
+  div img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+  }
+
+  .slick-dots {
+    width: 0;
+    list-style: none;
+    margin-left: 50%;
+    transform: translate(-50%) rotate(-90deg);
+
+    li button {
+      border: 1px solid $color-base-highlight;
+      border-radius: 50%;
+      padding: 0 0.1rem;
+      font-size: 0.5em;
+      color: $color-base-pastel;
+      background-color: $color-base-pastel;
+      transition: all 0.2s;
+    }
+
+    .slick-active button {
+      background-color: $color-base-highlight;
+      color: $color-base-highlight;
+    }
+  }
+}
